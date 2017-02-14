@@ -1,7 +1,8 @@
 package edu.iit.cs542;
 
 /* 
- * Fixed front implementation of a Queue using arrays */
+ * Fixed front implementation of a Queue using arrays 
+ */
 
 public class CS542Queue<E>  {
 	private E[] data;
