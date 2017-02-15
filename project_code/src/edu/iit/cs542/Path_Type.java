@@ -2,27 +2,34 @@ package edu.iit.cs542;
 
 public enum Path_Type {
 	ABC, ADC, BAD, BCD, CBA, CDA;
-	public static int get_path_index(Path_Type name) {
+
+	public static int get_path_index(String name) {
 		int v = -1;
 
 		switch (name) {
-		case ABC:
+		case "ABC":
 			v = 0;
 			break;
-		case ADC:
+		case "ADC":
 			v = 1;
 			break;
-		case BCD:
+		case "BCD":
 			v = 2;
 			break;
-		case BAD:
+		case "BAD":
 			v = 3;
 			break;
-		case CDA:
+		case "CDA":
 			v = 4;
 			break;
-		case CBA:
+		case "CBA":
 			v = 5;
+			break;
+		case "DAB":
+			v = 6;
+			break;
+		case "DCB":
+			v = 7;
 			break;
 		default:
 			System.out.println("get_path_index: invalid name");
@@ -31,26 +38,32 @@ public enum Path_Type {
 		return v;
 	}
 
-	public static Path_Type get_path_name(int index) {
-		Path_Type v = null;
+	public static String get_path_name(int index) {
+		String v = "null";
 		switch (index) {
 		case 0:
-			v = ABC;
+			v = "ABC";
 			break;
 		case 1:
-			v = ADC;
+			v = "ADC";
 			break;
 		case 2:
-			v = BCD;
+			v = "BCD";
 			break;
 		case 3:
-			v = BAD;
+			v = "BAD";
 			break;
 		case 4:
-			v = CDA;
+			v = "CDA";
 			break;
 		case 5:
-			v = CBA;
+			v = "CBA";
+			break;
+		case 6:
+			v = "DAB";
+			break;
+		case 7:
+			v = "DCB";
 			break;
 		default:
 			System.out.println("get_path_name: invalid index");
